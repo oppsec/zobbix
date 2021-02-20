@@ -45,6 +45,7 @@ def connection_check():
     except requests.exceptions.MissingSchema:
         return print("\n[red]:: Invalid URL, please check.")
 
+
 def version_check(target_url, response):
     zabbix_path = f"{target_url}/zabbix.php?action=dashboard.view&dashboardid=1"
 

@@ -15,7 +15,7 @@ banner = """[red]
             @opps3c[/]
 """
 
-zabbix_text = "Zabbix 4.2.0"
+zabbix_text = "Zabbix SIA"
 
 def clear():
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -53,10 +53,10 @@ def version_check(target_url, response):
     path_content = path_request.text
 
     if(zabbix_text in path_content):
-        print(f"\n[green]:: Zabbix version confirmed | {zabbix_text} [/]")
+        print(f"\n[green]:: Zabbix confirmed [/]")
         exploit(target_url, zabbix_path)
     else:
-        return print("\n[red] Can't detect Zabbix, stopping the exploit...")
+        return print("\n[red] Can't detect Zabbix, stopping the exploit... [/]")
 
 
 def exploit(target_url, zabbix_path):
